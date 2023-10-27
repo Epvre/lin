@@ -22,6 +22,31 @@ ls /usr/share/kbd/keymaps/**/*.map.gz
 loadkeys ru
 setfont cyr-sun16
 
+#Internet Connection
+ip link
+iwctl
+device list
+echo "Write name of Device"
+read DEVICE
+echo "Write name of Adapter"
+read ADAPTER
+device $DEVICE set-property Powered on
+adapter $ADAPTER set-property Powered on
+station $DEVICE scan
+station $DEVICE get-networks
+echo "Write your network name"
+read SSID
+station $DEVICE connect $SSID
+exit
+
+echo "Write your passphrase"
+read PASSPHRASE
+$ wpa_passphrase $SSID $PASSPHRASE
+
+
+
+
+
 
 
 #Activating this file 
