@@ -2,8 +2,6 @@
 # https://wiki.merionet.ru/articles/poshagovoe-rukovodstvo-kak-sobrat-yadro-linux-s-nulya/
 # https://habr.com/ru/articles/122179/
 
-
-
 FILES=( $(find ./ -type f -name "linux*.tar*" | sed 's/^.\///') )
 #FILES=( $(ls -a | grep "*.tar*") )
 
