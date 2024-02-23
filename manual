@@ -1,5 +1,19 @@
 #!/bin/bash
 # https://habr.com/ru/articles/709528/
+# https://habr.com/ru/articles/709528/
+# https://superuser.com/questions/519718/linux-on-uefi-how-to-reboot-to-the-uefi-setup-screen-like-windows-8-can
+# https://selectel.ru/blog/directory-structure-linux/
+# title           Arch Linux
+# linux           /vmlinuz-linux
+# initrd          /initramfs-linux.img
+# options         root=/dev/sdb2 rw iommu=soft 
+# EFI diretroot
+# efibootmgr -c -d /dev/sda -p 2 -l /vmlinuz-linux.efi -L "Arch Linux" -u "initrd=intel-ucode.img initrd=initramfs-linux.img root=LABEL=ROOT rw rootflags=noatime,nodiratime" [\code]
+# Проблема скорее в том, что некоторые прошивки грузят ядро, только если добавить к имени расширение .efi
+# https://lib.clodo.ru/network/setting-ip-linux.html
+# https://wiki.archlinux.org/title/udev_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)
+
+
 #IN
 
 echo "Name of 1st menu point"
