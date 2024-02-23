@@ -1,6 +1,7 @@
 #!/bin/bash 
 # https://wiki.merionet.ru/articles/poshagovoe-rukovodstvo-kak-sobrat-yadro-linux-s-nulya/
 # https://habr.com/ru/articles/122179/
+# https://soft.lafibre.info/
 
 FILES=( $(find ./ -type f -name "linux*.tar*" | sed 's/^.\///') )
 #FILES=( $(ls -a | grep "*.tar*") )
