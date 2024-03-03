@@ -1,6 +1,6 @@
 #!/bin/bash
 IN=core_arch_20240301.txt
-OUT=core_wget_list.txt
+OUT=wget_list_arch_core.txt
 >$OUT
 
 # Цикл для обработки каждой строки в списке
