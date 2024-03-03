@@ -1,5 +1,5 @@
 #!/bin/bash
-IN=arch_list_core_20240301.txt
+IN=list_arch_core_20240301.txt
 OUT=wget_list_arch_core.txt
 >$OUT
 
