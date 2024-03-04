@@ -6,7 +6,8 @@ OUT=wget_list_arch_$TYPE.txt
 URL_DIR="https://archive.archlinux.org/repos/2024/03/01/$TYPE/os/x86_64/"
 
 >$OUT
-curl -s $URL_DIR | awk '/\.pkg\.tar\.zst$/{getline url; print url}' > $OUT
+curl -s $URL_DIR | grep -oP '<a\s+(?:[^>]*?\s+)?href="([^"]*)"' | sed 's/<a\s\+(?:[^>]*\s+)?href="\(.*\)"/\1/g' > $OUT
+
 
 # For each line cycle
 # while read -r LINE; do
