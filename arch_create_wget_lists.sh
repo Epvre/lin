@@ -20,6 +20,9 @@ URL_DIR="https://archive.archlinux.org/repos/$DATE/$TYPE/os/x86_64/"
 #Extract links from http
 curl -s $URL_DIR | grep -o 'href="[^"]\+"' | sed 's/href="\([^"]\+\)"/\1/g' > $IN
 
+#curl -s $URL_DIR  | grep -o 'href="[^"]\+"' | sed 's/href="\([^"]\+\)"/\1/g' | aria2c -j8 -i - -d $REPO_DIR
+
+
 
 # Create wget-list
 while read -r LINE; do
