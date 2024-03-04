@@ -36,7 +36,7 @@ while read -r LINE; do
     echo $URL >> $OUT
 done < $IN
 
-#Downloading by wget-list
+#Downloading from file
 aria2c -j8 -i - -d $REPO_DIR
 #pacman -S  paralell
 #parallel -j 8 wget < $OUT
