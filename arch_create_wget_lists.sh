@@ -21,7 +21,7 @@ pacman -S aria2
 curl -s $URL_DIR | grep -o 'href="[^"]\+"' | sed 's/href="\([^"]\+\)"/\1/g' > $IN
 
 #curl -s $URL_DIR  | grep -o 'href="[^"]\+"' | sed 's/href="\([^"]\+\)"/\1/g' | aria2c -j8 -i - -d $REPO_DIR
-#wget -e robots=off --recursive --no-clobber --page-requisites --html-extension --convert-links --domains $DOMAIN --no-parent $URL_DIR
+#wget -e robots=off --recursive --no-clobber --page-requisites --html-extension --convert-links --domains $DOMAIN --no-parent $URL_DIR --continue --directory-prefix=$REPO_DIR
 
 
 # Create wget-list
