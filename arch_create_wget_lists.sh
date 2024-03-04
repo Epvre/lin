@@ -29,6 +29,7 @@ while read -r LINE; do
 done < $IN
 
 #Downloading by wget-list
-wget --input-file=$OUT --continue -o $REPO_DIR
+cd $REPO_DIR
+wget --input-file=$OUT  
 
  
