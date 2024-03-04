@@ -29,8 +29,9 @@ while read -r LINE; do
 done < $IN
 
 #Downloading by wget-list
-pacman -S aria2
+pacman -S aria2 paralell
 cd $REPO_DIR
 aria2c -j 8 -i $OUT  
+#parallel -j 8 wget < $OUT
 
  
