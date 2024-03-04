@@ -29,7 +29,8 @@ while read -r LINE; do
 done < $IN
 
 #Downloading by wget-list
+pacman -S aria2
 cd $REPO_DIR
-wget --input-file=$OUT  
+aria2c -j 8 -i $OUT  
 
  
