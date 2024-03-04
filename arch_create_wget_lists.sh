@@ -3,7 +3,7 @@
 TYPE=extra
 IN=list_arch_$TYPE_20240301.txt
 OUT=wget_list_arch_$TYPE.txt
-URL_DIR=https://archive.archlinux.org/repos/2024/03/01/$TYPE/os/x86_64/
+URL_DIR="https://archive.archlinux.org/repos/2024/03/01/$TYPE/os/x86_64/"
 
 >$OUT
 curl -s $URL_DIR | awk '/\.pkg\.tar\.zst$/{getline url; print url}' > $OUT
