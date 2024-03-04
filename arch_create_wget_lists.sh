@@ -14,7 +14,7 @@ while read -r LINE; do
     
     # Сохранить результат в файл
     echo $URL >> $OUT
-done < $INPUT
+done < $IN
 
 #EXTRA
 IN=list_arch_extra_20240301.txt
@@ -31,5 +31,5 @@ while read -r LINE; do
     
     # Сохранить результат в файл
     echo $URL >> $OUT
-done < $INPUT
+done < $IN
 
