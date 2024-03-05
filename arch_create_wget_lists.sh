@@ -27,7 +27,7 @@ curl -s $URL_DIR | grep -o 'href="[^"]\+"' | sed 's/href="\([^"]\+\)"/\1/g' > $I
 # Create wget-list
 while read -r LINE; do
     FILENAME=$(echo $LINE | awk '{print $1}')
-    URL="$URL_DIR/$FILENAME"
+    URL="$URL_DIR$FILENAME"
     echo $URL >> $OUT
 done < $IN
 
