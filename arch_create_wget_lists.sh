@@ -1,8 +1,8 @@
 #!/bin/bash
 #Mount and folder creation
 MNT=/mnt/sdb1
-DATE=2024/03/01
-TYPE=extra
+DATE=2013/08/31
+TYPE=core
 REPO_DIR=$MNT_DIR/repos/$DATE/$TYPE/os/x86_64/
 
 mkdir -p $REPO_DIR
