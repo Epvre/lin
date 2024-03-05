@@ -6,8 +6,6 @@ TYPE=core
 REPO_DIR=$MNT/repos/$DATE/$TYPE/os/x86_64/
 
 mkdir -pv $REPO_DIR
-echo $REPO_DIR
-
 
 #IN and OUT creation
 IN=list_arch_$TYPE_20240301.txt
