@@ -31,7 +31,7 @@ done < $IN
 
 #Downloading from file
 pacman -S aria2 
-aria2c -j8 -i - -d $REPO_DIR
+aria2c -j8 -i - -d -v $REPO_DIR
 #pacman -S  paralell
 #parallel -j 8 wget < $OUT
 
