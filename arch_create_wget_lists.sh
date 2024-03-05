@@ -5,7 +5,8 @@ DATE=2013/08/31
 TYPE=core
 REPO_DIR=$MNT_DIR/repos/$DATE/$TYPE/os/x86_64/
 
-mkdir -pv $REPO_DIR
+mkdir -p $REPO_DIR
+echo $REPO_DIR
 
 
 #IN and OUT creation
