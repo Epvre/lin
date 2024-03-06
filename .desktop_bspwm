@@ -17,6 +17,5 @@
 
 #Soft
   sudo pacman -S pulseaudio pavucontrol viewnior nemo htop cmus neofetch scrot ranger neovim mpv polybar picom rofi
-conky ttf-nerd-fonts-symbols feh jq ueberzug w3m imagemagick bspwm_rounded mpd ncmpcpp 
-
+conky ttf-nerd-fonts-symbols feh jq ueberzug w3m imagemagick bspwm_rounded mpd ncmpcpp gnu-free-fonts
   
