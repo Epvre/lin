@@ -6,7 +6,7 @@
   #sudo sed -iv 's/# %wheel ALL=(ALL:ALL) ALL/%root ALL=(ALL:ALL) ALL/g' /etc/sudoers
 
 #Add xserver
-  sudo pacman -S --noconfirm xorg-server xorg-xinit xorg-xset xorg-xsetroot xorg-xrandr xorg-xrdb
+  sudo pacman -S --noconfirm xorg-server xorg-xinit xorg-xset xorg-xsetroot xorg-xrandr xorg-xrdb 
 
 #Install Programs
   sudo pacman -S --noconfirm bspwm sxhkd xdo
@@ -14,4 +14,9 @@
 #Config
   sudo install -Dm755 /usr/share/doc/bspwm/examples/bspwmrc /home/$USER/.config/bspwm/bspwmrc -v
   sudo install -Dm644 /usr/share/doc/bspwm/examples/sxhkdrc /home/$USER/.config/sxhkd/sxhkdrc -v
+
+#Soft
+  sudo pacman -S pulseaudio pavucontrol viewnior nemo htop cmus neofetch scrot ranger neovim mpv polybar picom rofi
+conky ttf-nerd-fonts-symbols feh jq ueberzug w3m imagemagick bspwm_rounded mpd ncmpcpp 
+
   
