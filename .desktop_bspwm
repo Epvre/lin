@@ -7,18 +7,23 @@
 #Drivers
   sudo pacman -S --noconfirm --needed nvidia mesa lib32-virtualgl lib32-nvidia-utils primus bumblebee
   sudo gpasswd -a $USER bumblebee 
-  sudo pacman -S --noconfirm --needed acpi_call.
+  sudo pacman -S acpi_call
+  modprobe acpi_call
+  /usr/share/acpi_call/examples/turn_off_gpu.sh
+  /etc/modules-load.d/acpi_call.conf
 
 #Xserver
   sudo pacman -S --noconfirm --needed xorg-server xorg-xinit xorg-xset xorg-xsetroot xorg-xrandr xorg-xrdb 
 
 #Windows manager
   sudo pacman -S --noconfirm --needed bspwm sxhkd xdo
-
 #Config
   sudo install -Dm755 /usr/share/doc/bspwm/examples/bspwmrc /home/$USER/.config/bspwm/bspwmrc -v
   sudo install -Dm644 /usr/share/doc/bspwm/examples/sxhkdrc /home/$USER/.config/sxhkd/sxhkdrc -v
 
+#Terminal
+  sudo pacman -S xterm qterm kitty 
+exit
 #Soft
   sudo pacman -S pulseaudio pavucontrol viewnior nemo htop cmus neofetch scrot ranger neovim mpv polybar picom rofi
 conky ttf-nerd-fonts-symbols feh jq ueberzug w3m imagemagick bspwm_rounded mpd ncmpcpp gnu-free-fonts
