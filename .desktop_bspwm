@@ -8,6 +8,7 @@
   sudo pacman -S nvivdia mesa lib32-virtualgl lib32-nvidia-utils primus
   sudo gpasswd -a $USER bumblebee 
   sudo systemctl enable nvidia-enable.service
+exit
 #Xserver
   sudo pacman -S --noconfirm xorg-server xorg-xinit xorg-xset xorg-xsetroot xorg-xrandr xorg-xrdb 
 
