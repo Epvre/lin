@@ -15,14 +15,31 @@
 #Xserver
   sudo pacman -S --noconfirm --needed xorg-server xorg-xinit xorg-xset xorg-xsetroot xorg-xrandr xorg-xrdb 
 
+#Nvidia debug
+  #!/bin/bash
+  # Указываем путь к файлу конфигурации
+  config_file="/etc/bumblebee/xorg.conf.nvidia"
+  
+  # Находим строку "Section "Device""
+  start_line=$(grep -n "Section \"Device\"" $config_file | cut -d: -f1)
+  
+  # Находим строку "EndSection" после строки "Section "Device""
+  end_line=$(grep -n "EndSection" $config_file | awk -F: -v start=$start_line '$1 > start {print $1; exit}')
+  
+  # Вставляем новую настройку перед строкой "EndSection"
+  sed -i "${end_line}i\    Option \"HardDPMS\" \"false\"" $config_file
+
+
 #Windows manager
   sudo pacman -S --noconfirm --needed bspwm sxhkd xdo
 #Config
   sudo install -Dm755 /usr/share/doc/bspwm/examples/bspwmrc /home/$USER/.config/bspwm/bspwmrc -v
   sudo install -Dm644 /usr/share/doc/bspwm/examples/sxhkdrc /home/$USER/.config/sxhkd/sxhkdrc -v
+  sudo echo "expec bspwm" > /home/$USER/.xinitrc
+  systemctl enable sxhkd
 
 #Terminal
-  sudo pacman -S xterm qterminal kitty alacritty
+  sudo pacman -S --noconfirm --needed xterm qterminal kitty alacritty
 exit
 #Soft
   sudo pacman -S pulseaudio pavucontrol viewnior nemo htop cmus neofetch scrot ranger neovim mpv polybar picom rofi
