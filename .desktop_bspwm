@@ -22,7 +22,7 @@
   sudo install -Dm644 /usr/share/doc/bspwm/examples/sxhkdrc /home/$USER/.config/sxhkd/sxhkdrc -v
 
 #Terminal
-  sudo pacman -S xterm qterm kitty 
+  sudo pacman -S xterm qterminal kitty alacritty
 exit
 #Soft
   sudo pacman -S pulseaudio pavucontrol viewnior nemo htop cmus neofetch scrot ranger neovim mpv polybar picom rofi
