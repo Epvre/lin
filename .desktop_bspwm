@@ -7,8 +7,8 @@
 #Drivers
   sudo pacman -S --noconfirm -needed nvidia mesa lib32-virtualgl lib32-nvidia-utils primus bumblebee
   sudo gpasswd -a $USER bumblebee 
-  sudo systemctl enable nvidia-enable.service
-exit
+  sudo systemctl enable nvidia.service
+
 #Xserver
   sudo pacman -S --noconfirm -needed xorg-server xorg-xinit xorg-xset xorg-xsetroot xorg-xrandr xorg-xrdb 
 
