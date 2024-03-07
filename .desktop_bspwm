@@ -5,15 +5,15 @@
   #passwd $USER
   #sudo sed -iv 's/# %wheel ALL=(ALL:ALL) ALL/%root ALL=(ALL:ALL) ALL/g' /etc/sudoers
 #Drivers
-  sudo pacman -S --noconfirm -needed nvidia mesa lib32-virtualgl lib32-nvidia-utils primus bumblebee
+  sudo pacman -S --noconfirm --needed nvidia mesa lib32-virtualgl lib32-nvidia-utils primus bumblebee
   sudo gpasswd -a $USER bumblebee 
-  sudo systemctl enable nvidia.service
+  sudo pacman -S --noconfirm --needed acpi_call.
 
 #Xserver
-  sudo pacman -S --noconfirm -needed xorg-server xorg-xinit xorg-xset xorg-xsetroot xorg-xrandr xorg-xrdb 
+  sudo pacman -S --noconfirm --needed xorg-server xorg-xinit xorg-xset xorg-xsetroot xorg-xrandr xorg-xrdb 
 
 #Windows manager
-  sudo pacman -S --noconfirm -needed bspwm sxhkd xdo
+  sudo pacman -S --noconfirm --needed bspwm sxhkd xdo
 
 #Config
   sudo install -Dm755 /usr/share/doc/bspwm/examples/bspwmrc /home/$USER/.config/bspwm/bspwmrc -v
