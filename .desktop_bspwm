@@ -5,7 +5,7 @@
   #passwd $USER
   #sudo sed -iv 's/# %wheel ALL=(ALL:ALL) ALL/%root ALL=(ALL:ALL) ALL/g' /etc/sudoers
 #Drivers
-  sudo pacman -S nvivdia mesa lib32-virtualgl lib32-nvidia-utils primus bumblebee
+  sudo pacman -S nvidia mesa lib32-virtualgl lib32-nvidia-utils primus bumblebee
   sudo gpasswd -a $USER bumblebee 
   sudo systemctl enable nvidia-enable.service
 exit
