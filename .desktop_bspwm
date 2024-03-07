@@ -1,14 +1,17 @@
 #!/bin/bash
 #Add user
-  #USER=epvre
+  USER=epvre
   #sudo useradd -m -G root $USER
   #passwd $USER
   #sudo sed -iv 's/# %wheel ALL=(ALL:ALL) ALL/%root ALL=(ALL:ALL) ALL/g' /etc/sudoers
-
-#Add xserver
+#Drivers
+  sudo pacman -S nvivdia mesa lib32-virtualgl lib32-nvidia-utils primus
+  sudo gpasswd -a $USER bumblebee 
+  sudo systemctl enable nvidia-enable.service
+#Xserver
   sudo pacman -S --noconfirm xorg-server xorg-xinit xorg-xset xorg-xsetroot xorg-xrandr xorg-xrdb 
 
-#Install Programs
+#Windows manager
   sudo pacman -S --noconfirm bspwm sxhkd xdo
 
 #Config
